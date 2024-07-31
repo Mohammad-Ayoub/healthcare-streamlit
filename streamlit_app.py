@@ -220,8 +220,12 @@ def space(n,element): # n: number of lines
         element.write("")
 space(4,st.sidebar)
 
-# My name and professor's name
-st.sidebar.subheader("Done by Mohammad Hussein Ayoub")
+# Sidebar with names listed
+st.sidebar.subheader("Done by:")
+st.sidebar.markdown("Mohammad Hussein Ayoub")
+st.sidebar.markdown("Taima Kelani")
+st.sidebar.markdown("Leen Al Sayyid")
+
 # Sidebar with hyperlinked subheader
 st.sidebar.markdown("### [Professor Samar Hajj](https://www.aub.edu.lb/pages/profile.aspx?memberID=sh137)")
 
