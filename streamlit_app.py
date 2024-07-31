@@ -234,7 +234,7 @@ html_string1 = '''<!DOCTYPE html>
 <html>
 <body>
  <a href="https://www.aub.edu.lb/osb/MSBA/Pages/default.aspx">
-  <img src="https://spservices.aub.edu.lb/PublicWebService.svc/FMIS_GetProfilePicture?memberId=sh137" width=300" height="200" />
+  <img src="https://spservices.aub.edu.lb/PublicWebService.svc/FMIS_GetProfilePicture?memberId=sh137" width=300" height="300" />
  </a>
 </body>
 </html>'''
