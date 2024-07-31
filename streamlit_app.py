@@ -4,7 +4,7 @@ import plotly.express as px
 import streamlit as st
 
 # Load the CSV file
-csv_path = "/Users/mohdayb/Downloads/IHME_GLOBAL_FUND_INTERVENTION_COST_EFFECTIVENESS_ESTIMATES_Y2024M03D13 (1).csv"
+csv_path = "data/my_data.csv"
 data = pd.read_csv(csv_path)
 
 # Filter the data to focus on HIV/AIDS interventions
