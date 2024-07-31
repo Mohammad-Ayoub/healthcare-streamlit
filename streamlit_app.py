@@ -231,7 +231,7 @@ st.sidebar.markdown("### [Professor Samar Hajj](https://www.aub.edu.lb/pages/pro
 
 st.sidebar.markdown(
     """
-    [![Alt Text](https://www.google.com/imgres?q=samar%20hajj%20aub&imgurl=https%3A%2F%2Fspservices.aub.edu.lb%2FPublicWebService.svc%2FFMIS_GetProfilePicture%3FmemberId%3Dsh137&imgrefurl=https%3A%2F%2Fwww.aub.edu.lb%2Fpages%2Fprofile.aspx%3FmemberID%3Dsh137&docid=Uw4HZOVvJz-XOM&tbnid=zTyA-3PTW7FkpM&vet=12ahUKEwjD38TT5tGHAxW2VaQEHUvPKOMQM3oECBwQAA..i&w=359&h=362&hcb=2&ved=2ahUKEwjD38TT5tGHAxW2VaQEHUvPKOMQM3oECBwQAA)](https://www.google.com)
+    [![Alt Text](https://www.google.com/imgres?q=samar%20hajj%20aub&imgurl=https%3A%2F%2Fspservices.aub.edu.lb%2FPublicWebService.svc%2FFMIS_GetProfilePicture%3FmemberId%3Dsh137&imgrefurl=https%3A%2F%2Fwww.aub.edu.lb%2Fpages%2Fprofile.aspx%3FmemberID%3Dsh137&docid=Uw4HZOVvJz-XOM&tbnid=zTyA-3PTW7FkpM&vet=12ahUKEwjD38TT5tGHAxW2VaQEHUvPKOMQM3oECBwQAA..i&w=359&h=362&hcb=2&ved=2ahUKEwjD38TT5tGHAxW2VaQEHUvPKOMQM3oECBwQAA)]
     """
 )
 
