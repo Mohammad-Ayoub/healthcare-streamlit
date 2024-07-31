@@ -214,6 +214,10 @@ html_string = '''<!DOCTYPE html>
 </body>
 </html>'''
 st.sidebar.markdown(html_string, unsafe_allow_html=True)
+
+def space(n,element): # n: number of lines
+    for i in range(n):
+        element.write("")
 space(4,st.sidebar)
 
 # My name and professor's name
