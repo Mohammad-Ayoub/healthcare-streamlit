@@ -204,6 +204,23 @@ fig_prevalence_icer_filtered.update_traces(marker=dict(size=12))
 # Streamlit layout
 st.title('HIV/AIDS Intervention Analysis')
 
+# MSBA Logo
+html_string = '''<!DOCTYPE html>
+<html>
+<body>
+ <a href="https://www.aub.edu.lb/osb/MSBA/Pages/default.aspx">
+  <img src="https://www.aub.edu.lb/osb/research/Darwazah/PublishingImages/OSB%20Stamp%20color-MSBA.png" width=300" height="80" />
+ </a>
+</body>
+</html>'''
+st.sidebar.markdown(html_string, unsafe_allow_html=True)
+space(4,st.sidebar)
+
+# My name and professor's name
+st.sidebar.subheader("Done by Mohammad Hussein Ayoub")
+st.sidebar.subheader("Professor [Fouad Zablith](https://www.aub.edu.lb/pages/profile.aspx?memberId=fz13)")
+
+
 tab1, tab2, tab3, tab4, tab5, tab6,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Egypt Age Group', 'Sudan Age Group','fig_prevalence_icer_filtered'])
 
 with tab1:
