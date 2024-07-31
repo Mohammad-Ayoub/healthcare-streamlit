@@ -222,7 +222,8 @@ space(4,st.sidebar)
 
 # My name and professor's name
 st.sidebar.subheader("Done by Mohammad Hussein Ayoub")
-st.sidebar.subheader("Professor [Samar Hajj](https://www.aub.edu.lb/pages/profile.aspx?memberID=sh137")
+# Sidebar with hyperlinked subheader
+st.sidebar.markdown("### [Professor Samar Hajj](https://www.aub.edu.lb/pages/profile.aspx?memberID=sh137)")
 
 
 tab1, tab2, tab3, tab4, tab5, tab6,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Egypt Age Group', 'Sudan Age Group','fig_prevalence_icer_filtered'])
