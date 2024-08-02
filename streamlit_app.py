@@ -234,14 +234,14 @@ html_string1 = '''<!DOCTYPE html>
 <html>
 <body>
  <a href="https://www.aub.edu.lb/osb/MSBA/Pages/default.aspx">
-  <img src="https://spservices.aub.edu.lb/PublicWebService.svc/FMIS_GetProfilePicture?memberId=sh137" width=300" height="300" />
+  <img src="https://spservices.aub.edu.lb/PublicWebService.svc/FMIS_GetProfilePicture?memberId=sh137" width=300" height="250" />
  </a>
 </body>
 </html>'''
 st.sidebar.markdown(html_string1, unsafe_allow_html=True)
 
 
-tab1, tab2, tab3, tab4, tab5, tab6,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Egypt Age Group', 'Sudan Age Group','fig_prevalence_icer_filtered'])
+tab1, tab2, tab3, tab4, tab5, tab6,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Egypt Age Group', 'Sudan Age Group','fig_prevalence vs ICER'])
 
 with tab1:
     st.plotly_chart(fig1, use_container_width=True)
