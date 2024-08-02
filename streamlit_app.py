@@ -160,19 +160,21 @@ fig_egypt = px.bar(
     barmode='group'
 )
 
-# Function to plot ICER by Age Group for a given country
-def plot_icer_by_age_group(country_data, country_name):
+# Function to plot ICER by Age Group and Intervention Type for a given country
+def plot_icer_by_age_group_and_intervention(country_data, country_name, intervention_type):
+    filtered_data = country_data[country_data['intervention'] == intervention_type]
     fig = px.bar(
-        country_data,
+        filtered_data,
         x='population_age',
         y='predicted_icer_usd',
         color='intervention',
-        title=f'Average ICER for HIV/AIDS Interventions by Age Group and Intervention Type in {country_name}',
+        title=f'Average ICER for HIV/AIDS Interventions by Age Group and Intervention Type in {country_name} ({intervention_type})',
         labels={'predicted_icer_usd': 'Average ICER (USD)', 'population_age': 'Age Group'},
         template='plotly_white',
         barmode='group'
     )
     return fig
+
 
 # Plotting the average ICER by age group per intervention type for Sudan
 fig_sudan = px.bar(
