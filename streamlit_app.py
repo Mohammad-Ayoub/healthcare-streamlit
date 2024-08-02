@@ -160,6 +160,20 @@ fig_egypt = px.bar(
     barmode='group'
 )
 
+# Function to plot ICER by Age Group for a given country
+def plot_icer_by_age_group(country_data, country_name):
+    fig = px.bar(
+        country_data,
+        x='population_age',
+        y='predicted_icer_usd',
+        color='intervention',
+        title=f'Average ICER for HIV/AIDS Interventions by Age Group and Intervention Type in {country_name}',
+        labels={'predicted_icer_usd': 'Average ICER (USD)', 'population_age': 'Age Group'},
+        template='plotly_white',
+        barmode='group'
+    )
+    return fig
+
 # Plotting the average ICER by age group per intervention type for Sudan
 fig_sudan = px.bar(
     sudan_age_group_data,
@@ -241,7 +255,7 @@ html_string1 = '''<!DOCTYPE html>
 st.sidebar.markdown(html_string1, unsafe_allow_html=True)
 
 
-tab1, tab2, tab3, tab4, tab5, tab6,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Egypt Age Group', 'Sudan Age Group','fig_prevalence vs ICER'])
+tab1, tab2, tab3, tab4, tab5,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Country Age Group', 'fig_prevalence vs ICER'])
 
 with tab1:
     st.plotly_chart(fig1, use_container_width=True)
@@ -256,10 +270,13 @@ with tab4:
     st.plotly_chart(fig6, use_container_width=True)
 
 with tab5:
-    st.plotly_chart(fig_egypt, use_container_width=True)
+    # Interactive country selection
+    country = st.selectbox("Select Country", options=["Egypt", "Sudan"])
+    if country == "Egypt":
+        st.plotly_chart(plot_icer_by_age_group(egypt_age_group_data, "Egypt"), use_container_width=True)
+    else:
+        st.plotly_chart(plot_icer_by_age_group(sudan_age_group_data, "Sudan"), use_container_width=True)
 
-with tab6:
-    st.plotly_chart(fig_sudan, use_container_width=True)
 
 with tab7:
     st.plotly_chart(fig_prevalence_icer_filtered, use_container_width=True)
