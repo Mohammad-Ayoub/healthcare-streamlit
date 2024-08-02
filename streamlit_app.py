@@ -270,12 +270,15 @@ with tab4:
     st.plotly_chart(fig6, use_container_width=True)
 
 with tab5:
-    # Interactive country selection
+    # Interactive country and intervention type selection
     country = st.selectbox("Select Country", options=["Egypt", "Sudan"])
+    intervention_type = st.selectbox("Select Intervention Type", options=intervention_types)
+    
     if country == "Egypt":
-        st.plotly_chart(plot_icer_by_age_group(egypt_age_group_data, "Egypt"), use_container_width=True)
+        st.plotly_chart(plot_icer_by_age_group_and_intervention(egypt_age_group_data, "Egypt", intervention_type), use_container_width=True)
     else:
-        st.plotly_chart(plot_icer_by_age_group(sudan_age_group_data, "Sudan"), use_container_width=True)
+        st.plotly_chart(plot_icer_by_age_group_and_intervention(sudan_age_group_data, "Sudan", intervention_type), use_container_width=True)
+
 
 
 with tab7:
