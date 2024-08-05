@@ -258,7 +258,7 @@ st.sidebar.markdown(html_string1, unsafe_allow_html=True)
 # Get the unique intervention types and handle NaNs
 intervention_types = hiv_data['intervention'].dropna().unique()
 
-tab1, tab2, tab3, tab4, tab5,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Country Age Group', 'fig_prevalence vs ICER'])
+tab1, tab2, tab3, tab4, tab5,tab7 = st.tabs(['Geographical Mapping', 'Average ICER by Region', 'Average ICER by Country', 'Intervention Type', 'Country Age Group', 'prevalence vs ICER'])
 
 with tab1:
     st.plotly_chart(fig1, use_container_width=True)
